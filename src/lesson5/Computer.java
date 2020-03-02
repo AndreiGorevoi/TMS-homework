@@ -13,7 +13,7 @@ public class Computer {
         cpu = "Intel Celeron J1900 with 4 core and 2000 frequency ";
         ram = "DDR3 4GB";
         hdd = "SSD 120 GB";
-        lifeCycles = 9999;
+        lifeCycles = 1;
 
     }
 
@@ -33,43 +33,27 @@ public class Computer {
 
     public  void turnOn(){
         if (statusOfLife==1 && lifeCycles<=2) {
-            System.out.println("Starting...");
             int randomNumber = (int) Math.round(Math.random());
             Scanner sc = new Scanner(System.in);
-            System.out.println("Game is starting, enter 0 or 1");
+            System.out.println("0 or 1?");
             String choiceOfUser = sc.nextLine();
-            if (randomNumber == Integer.parseInt(choiceOfUser)) {
-                System.out.println("Sound of starting");
-                System.out.println("________________________________");
-            } else {
-                statusOfLife =0;
-                System.out.println("Smell of smoke");
-                System.out.println("Youre lifeCycles = " + lifeCycles);
+            if (randomNumber != Integer.parseInt(choiceOfUser)) {
+                statusOfLife = 0;
             }
-        }else {
-            System.out.println("Your computer has died");
-
         }
 
     }
     public void turnOff(){
         if(statusOfLife==1 && lifeCycles<=2){
-            System.out.println("Shutdown...");
             int randomNumber = (int) Math.round(Math.random());
             Scanner sc = new Scanner(System.in);
-            System.out.println("Game is starting, enter 0 or 1");
+            System.out.println("0 or 1?");
             String choiceOfUser = sc.nextLine();
             if(randomNumber== Integer.parseInt(choiceOfUser)){
-                System.out.println("Success exit");
-                System.out.println("________________________________");
                 lifeCycles++;
             }else {
                 statusOfLife=0;
-                System.out.println("Smell of smoke");
-                System.out.println("Youre lifeCycles = " + lifeCycles);
             }
-        }else {
-            System.out.println("Your computer has died");
         }
     }
 }
