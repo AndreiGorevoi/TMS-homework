@@ -33,8 +33,6 @@ public class MetEx25 {
         if(((money%50)%20)==0){
             result=true;
        if(money/100<this.numOf100 && (money%100)/50<this.numOf50 && (money%50)/20<this.numOf20){
-           result = true;
-           System.out.println("1-q");
            System.out.println("100-к: " + money/100);
            System.out.println("50-к: " + (money%100)/50);
            System.out.println("20-к: " + (money%50)/20);
@@ -43,8 +41,6 @@ public class MetEx25 {
            this.numOf20-=(money%50)/20;
        }else if((money-this.numOf100*100)/50<this.numOf50 &&((money-this.numOf100*100)%50)%20==0
                && ((money-this.numOf100*100)%50)/20<this.numOf20){
-           result = true;
-           System.out.println("2-q");
            System.out.println("100-к: " + this.numOf100);
            System.out.println("50-к: " + (money-this.numOf100*100)/50);
            System.out.println("20-к: " + ((money-this.numOf100*100)%50)/20);
@@ -53,8 +49,6 @@ public class MetEx25 {
            this.numOf100=0;
        }else if((money-(this.numOf100*100+this.numOf50*50))%20==0 &&
                (money-(this.numOf100*100+this.numOf50*50))/20<this.numOf20){
-           result=true;
-           System.out.println("3-q");
            System.out.println("100-к: " + this.numOf100);
            System.out.println("50-к: " + this.numOf50);
            System.out.println("20-к: " + (money-(this.numOf100*100+this.numOf50*50))/20);
