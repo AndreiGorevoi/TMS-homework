@@ -21,6 +21,7 @@ public class Computer {
         this.cpu = cpu;
         this.ram = ram;
         this.hdd = hdd;
+        lifeCycles = 1;
     }
 
     public void getParammetrs(){
