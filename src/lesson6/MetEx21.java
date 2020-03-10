@@ -15,7 +15,7 @@ append, а также аналогино для StringBuffer. Сравните �
         //string
         long start = System.currentTimeMillis();
 
-        for (int i = 0; i <50000 ; i++) {
+        for (int i = 0; i <500000 ; i++) {
             string+=i;
         }
 
