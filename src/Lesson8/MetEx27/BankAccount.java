@@ -6,7 +6,7 @@ public class BankAccount extends Account {
 
     public BankAccount(int balance, String personOfAccount, String typeOfCurrency){
         this.balance=balance;
-        this.personOfAccount=personOfAccount;
+        setPersonOfAccount(personOfAccount);
         this.typeOfCurrency = typeOfCurrency;
     }
     @Override

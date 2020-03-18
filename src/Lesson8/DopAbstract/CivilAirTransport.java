@@ -1,12 +1,23 @@
 package Lesson8.DopAbstract;
 
 public class CivilAirTransport extends AirTransport {
-    int maxNumbersOfPassengers;
-    Boolean isBusiness;
+    private int maxNumbersOfPassengers;
+    private Boolean isBusiness;
 
-    private double powerCalc(){
-        double power = (double)this.power*0.74;
-        return power;
+    public int getMaxNumbersOfPassengers() {
+        return maxNumbersOfPassengers;
+    }
+
+    public Boolean getBusiness() {
+        return isBusiness;
+    }
+
+    public void setMaxNumbersOfPassengers(int maxNumbersOfPassengers) {
+        this.maxNumbersOfPassengers = maxNumbersOfPassengers;
+    }
+
+    public void setBusiness(Boolean business) {
+        isBusiness = business;
     }
 
     public void testNumOfPassengers(int numbersOfPassengers){
@@ -23,12 +34,12 @@ public class CivilAirTransport extends AirTransport {
         return "CivilAirTransport{" +
                 "maxNumbersOfPassengers=" + maxNumbersOfPassengers +
                 ", isBusiness=" + isBusiness +
-                ", wingsSpan=" + wingsSpan +
-                ", spaceForTakeoff=" + spaceForTakeoff +
-                ", power=" + power +
-                ", maxSpeed=" + maxSpeed +
-                ", weight=" + weight +
-                ", model='" + model  +
+                ", wingsSpan=" + +getWingsSpan()+
+                ", spaceForTakeoff=" + getSpaceForTakeoff() +
+                ", power=" + getPower() +
+                ", maxSpeed=" + getMaxSpeed() +
+                ", weight=" + getWeight() +
+                ", model='" + getModel()  +
                 ", power(kV)= " + powerCalc()+'\''+
                 '}';
     }

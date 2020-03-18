@@ -1,13 +1,25 @@
 package Lesson8.DopAbstract;
 
 public class MilitaryAirTransport extends AirTransport {
-    Boolean isBailout;
-    int numsOfRockets;
+    private Boolean isBailout;
 
-    private double powerCalc(){
-        double power = (double)this.power*0.74;
-        return power;
+    public Boolean getBailout() {
+        return isBailout;
     }
+
+    public int getNumsOfRockets() {
+        return numsOfRockets;
+    }
+
+    public void setBailout(Boolean bailout) {
+        isBailout = bailout;
+    }
+
+    public void setNumsOfRockets(int numsOfRockets) {
+        this.numsOfRockets = numsOfRockets;
+    }
+
+    private int numsOfRockets;
 
     public void fireON(){
         if(numsOfRockets>0){
@@ -30,12 +42,12 @@ public class MilitaryAirTransport extends AirTransport {
         return "MilitaryAirTransport{" +
                 "isBailout=" + isBailout +
                 ", numsOfRockets=" + numsOfRockets +
-                ", wingsSpan=" + wingsSpan +
-                ", spaceForTakeoff=" + spaceForTakeoff +
-                ", power=" + power +
-                ", maxSpeed=" + maxSpeed +
-                ", weight=" + weight +
-                ", model='" + model  +
+                ", wingsSpan=" + getWingsSpan()  +
+                ", spaceForTakeoff=" + getSpaceForTakeoff()  +
+                ", power=" + powerCalc() +
+                ", maxSpeed=" + getMaxSpeed() +
+                ", weight=" + getWeight() +
+                ", model='" + getModel()  +
                 ", power(kV)= " + powerCalc()+'\''+
                 '}';
     }

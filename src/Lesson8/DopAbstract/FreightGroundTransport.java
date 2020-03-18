@@ -1,11 +1,15 @@
 package Lesson8.DopAbstract;
 
 public class FreightGroundTransport extends GroundTransport {
-    double carrying; // в тоннах
 
-    private double powerCalc(){
-        double power = (double)this.power*0.74;
-        return power;
+    private double carrying; // в тоннах
+
+    public void setCarrying(double carrying) {
+        this.carrying = carrying;
+    }
+
+    public double getCarrying() {
+        return carrying;
     }
 
     public void testCarrying(double cargo){
@@ -20,12 +24,12 @@ public class FreightGroundTransport extends GroundTransport {
     public String toString() {
         return "FreightGroundTransport{" +
                 "carrying=" + carrying +
-                ", numbersOfWheels=" + numbersOfWheels +
-                ", fuelConsumption=" + fuelConsumption +
-                ", power=" + power +
-                ", maxSpeed=" + maxSpeed +
-                ", weight=" + weight +
-                ", model='" + model  +
+                ", numbersOfWheels=" + getNumbersOfWheels() +
+                ", fuelConsumption=" + getFuelConsumption() +
+                ", power=" + powerCalc() +
+                ", maxSpeed=" + getMaxSpeed() +
+                ", weight=" + getWeight() +
+                ", model='" + getModel()  +
                 ", power(kV)= " + powerCalc()+'\''+
                 '}';
     }

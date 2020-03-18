@@ -1,22 +1,33 @@
 package Lesson8.DopAbstract;
 
 public class PassengerGroundTransport extends GroundTransport {
-    String typeOfBody;
-    int maxNumbersOfPassengers;
+    private String typeOfBody;
+    private int maxNumbersOfPassengers;
 
-    private double powerCalc(){
-        double power = (double)this.power*0.74;
-        return power;
+    public String getTypeOfBody() {
+        return typeOfBody;
+    }
+
+    public int getMaxNumbersOfPassengers() {
+        return maxNumbersOfPassengers;
+    }
+
+    public void setTypeOfBody(String typeOfBody) {
+        this.typeOfBody = typeOfBody;
+    }
+
+    public void setMaxNumbersOfPassengers(int maxNumbersOfPassengers) {
+        this.maxNumbersOfPassengers = maxNumbersOfPassengers;
     }
 
     public void tripOfCar(double h){
-        double s = h*maxSpeed;
-        System.out.println("In " + h + "h, auto " + model + " will pass " + s + "km with max speed: "
-                + maxSpeed+ "km/h and spend "+ calcFuelConsumption(s) +"l of fuels");
+        double s = h*getMaxSpeed();
+        System.out.println("In " + h + "h, auto " + getModel() + " will pass " + s + "km with max speed: "
+                + getMaxSpeed()+ "km/h and spend "+ calcFuelConsumption(s) +"l of fuels");
     }
 
     private double calcFuelConsumption(double s){
-        double fuelIsSpent = (s/100)*fuelConsumption ;
+        double fuelIsSpent = (s/100)*getFuelConsumption() ;
         fuelIsSpent*=100;
         int temp = (int) Math.round(fuelIsSpent);
         fuelIsSpent=(double) temp/100;
@@ -28,12 +39,12 @@ public class PassengerGroundTransport extends GroundTransport {
         return "PassengerGroundTransport{" +
                 "typeOfBody='" + typeOfBody + '\'' +
                 ", maxNumbersOfPassengers=" + maxNumbersOfPassengers +
-                ", numbersOfWheels=" + numbersOfWheels +
-                ", fuelConsumption=" + fuelConsumption +
-                ", power=" + power +
-                ", maxSpeed=" + maxSpeed +
-                ", weight=" + weight +
-                ", model='" + model  +
+                ", numbersOfWheels=" + getNumbersOfWheels() +
+                ", fuelConsumption=" + getFuelConsumption() +
+                ", power=" + getPower() +
+                ", maxSpeed=" + getMaxSpeed() +
+                ", weight=" + getWeight() +
+                ", model='" + getModel()  +
                 ", power (kV)="+ powerCalc()+ '\''+
                 '}';
     }
