@@ -22,15 +22,8 @@ public class FreightGroundTransport extends GroundTransport {
 
     @Override
     public String toString() {
-        return "FreightGroundTransport{" +
+        return super.toString()+"FreightGroundTransport{" +
                 "carrying=" + carrying +
-                ", numbersOfWheels=" + getNumbersOfWheels() +
-                ", fuelConsumption=" + getFuelConsumption() +
-                ", power=" + powerCalc() +
-                ", maxSpeed=" + getMaxSpeed() +
-                ", weight=" + getWeight() +
-                ", model='" + getModel()  +
-                ", power(kV)= " + powerCalc()+'\''+
                 '}';
     }
 }

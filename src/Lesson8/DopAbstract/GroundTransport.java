@@ -1,8 +1,8 @@
 package Lesson8.DopAbstract;
 
 public class GroundTransport extends Transport {
-   private int numbersOfWheels;
-    private double fuelConsumption; // л/100км.
+   protected int numbersOfWheels;
+    protected double fuelConsumption; // л/100км.
 
     public int getNumbersOfWheels() {
         return numbersOfWheels;
@@ -18,5 +18,13 @@ public class GroundTransport extends Transport {
 
     public void setFuelConsumption(double fuelConsumption) {
         this.fuelConsumption = fuelConsumption;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "GroundTransport{" +
+                "numbersOfWheels=" + numbersOfWheels +
+                ", fuelConsumption=" + fuelConsumption +
+                '}';
     }
 }

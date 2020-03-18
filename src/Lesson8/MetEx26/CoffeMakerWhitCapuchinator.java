@@ -24,12 +24,8 @@ public class CoffeMakerWhitCapuchinator extends CoffeMaker {
 
     @Override
     public String toString() {
-        return "CoffeMakerWhitCapuchinator{" +
+        return super.toString()+"CoffeMakerWhitCapuchinator{" +
                 "typeOfCapuchinator='" + typeOfCapuchinator + '\'' +
-                ", volumeOfTurka=" + getVolumeOfTurka() +
-                ", power=" + getPower() +
-                ", comeFrom='" + getcomeFrom() + '\'' +
-                ", model='" + getModel() + '\'' +
                 '}';
     }
 }

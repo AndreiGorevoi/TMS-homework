@@ -1,7 +1,8 @@
 package Lesson8.DopAbstract;
 
 public class AirTransport extends Transport {
-    private int wingsSpan; // м
+    protected int wingsSpan; // м
+    protected int spaceForTakeoff;
 
     public void setWingsSpan(int wingsSpan) {
         this.wingsSpan = wingsSpan;
@@ -19,5 +20,11 @@ public class AirTransport extends Transport {
         return spaceForTakeoff;
     }
 
-    private int spaceForTakeoff;
+    @Override
+    public String toString() {
+        return super.toString()+"AirTransport{" +
+                "wingsSpan=" + wingsSpan +
+                ", spaceForTakeoff=" + spaceForTakeoff +
+                '}';
+    }
 }

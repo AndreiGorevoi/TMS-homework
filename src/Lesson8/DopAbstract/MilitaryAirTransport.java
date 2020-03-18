@@ -2,6 +2,7 @@ package Lesson8.DopAbstract;
 
 public class MilitaryAirTransport extends AirTransport {
     private Boolean isBailout;
+    private int numsOfRockets;
 
     public Boolean getBailout() {
         return isBailout;
@@ -19,7 +20,7 @@ public class MilitaryAirTransport extends AirTransport {
         this.numsOfRockets = numsOfRockets;
     }
 
-    private int numsOfRockets;
+
 
     public void fireON(){
         if(numsOfRockets>0){
@@ -39,16 +40,9 @@ public class MilitaryAirTransport extends AirTransport {
 
     @Override
     public String toString() {
-        return "MilitaryAirTransport{" +
+        return super.toString()+"MilitaryAirTransport{" +
                 "isBailout=" + isBailout +
                 ", numsOfRockets=" + numsOfRockets +
-                ", wingsSpan=" + getWingsSpan()  +
-                ", spaceForTakeoff=" + getSpaceForTakeoff()  +
-                ", power=" + powerCalc() +
-                ", maxSpeed=" + getMaxSpeed() +
-                ", weight=" + getWeight() +
-                ", model='" + getModel()  +
-                ", power(kV)= " + powerCalc()+'\''+
                 '}';
     }
 }

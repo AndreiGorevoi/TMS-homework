@@ -21,13 +21,13 @@ public class PassengerGroundTransport extends GroundTransport {
     }
 
     public void tripOfCar(double h){
-        double s = h*getMaxSpeed();
-        System.out.println("In " + h + "h, auto " + getModel() + " will pass " + s + "km with max speed: "
-                + getMaxSpeed()+ "km/h and spend "+ calcFuelConsumption(s) +"l of fuels");
+        double s = h*maxSpeed;
+        System.out.println("In " + h + "h, auto " + model + " will pass " + s + "km with max speed: "
+                + maxSpeed+ "km/h and spend "+ calcFuelConsumption(s) +"l of fuels");
     }
 
     private double calcFuelConsumption(double s){
-        double fuelIsSpent = (s/100)*getFuelConsumption() ;
+        double fuelIsSpent = (s/100)*fuelConsumption ;
         fuelIsSpent*=100;
         int temp = (int) Math.round(fuelIsSpent);
         fuelIsSpent=(double) temp/100;
@@ -36,16 +36,9 @@ public class PassengerGroundTransport extends GroundTransport {
 
     @Override
     public String toString() {
-        return "PassengerGroundTransport{" +
+        return super.toString()+"PassengerGroundTransport{" +
                 "typeOfBody='" + typeOfBody + '\'' +
                 ", maxNumbersOfPassengers=" + maxNumbersOfPassengers +
-                ", numbersOfWheels=" + getNumbersOfWheels() +
-                ", fuelConsumption=" + getFuelConsumption() +
-                ", power=" + getPower() +
-                ", maxSpeed=" + getMaxSpeed() +
-                ", weight=" + getWeight() +
-                ", model='" + getModel()  +
-                ", power (kV)="+ powerCalc()+ '\''+
                 '}';
     }
 }

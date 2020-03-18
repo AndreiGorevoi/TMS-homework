@@ -1,9 +1,9 @@
 package Lesson8.MetEx26;
 
 public abstract class Appliances {
-    private int power;
-    private String comeFrom;
-    private String model;
+    protected int power;
+    protected String comeFrom;
+    protected String model;
 
     public int getPower() {
         return power;

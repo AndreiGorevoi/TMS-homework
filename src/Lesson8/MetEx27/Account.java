@@ -1,8 +1,8 @@
 package Lesson8.MetEx27;
 
 public abstract class Account {
-    private Boolean statusAccount = true;
-    private String personOfAccount;
+    protected Boolean statusAccount = true;
+    protected String personOfAccount;
 
     public void setStatusAccount(Boolean statusAccount) {
         this.statusAccount = statusAccount;

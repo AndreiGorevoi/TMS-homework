@@ -1,7 +1,7 @@
 package Lesson8.MetEx26;
 
 public class CoffeMaker extends Appliances {
-    private int volumeOfTurka;
+    protected int volumeOfTurka;
 
     public int getVolumeOfTurka() {
         return volumeOfTurka;
@@ -13,9 +13,9 @@ public class CoffeMaker extends Appliances {
 
     public CoffeMaker(int power, String comeFrom, String model, int volumeOfTurka){
         this.volumeOfTurka=volumeOfTurka;
-       setPower(power);
-       setComeFrom(comeFrom);
-       setModel(model);
+       this.power=power;
+       this.comeFrom=comeFrom;
+       this.model=model;
     }
     @Override
     void powerOn() {
@@ -24,7 +24,7 @@ public class CoffeMaker extends Appliances {
 
     @Override
     void getComeFrom() {
-        System.out.println("Made in " + getcomeFrom());
+        System.out.println("Made in " + comeFrom);
 
     }
 
@@ -32,9 +32,9 @@ public class CoffeMaker extends Appliances {
     public String toString() {
         return "CoffeMaker{" +
                 "volumeOfTurka=" + volumeOfTurka +
-                ", power=" + getPower() +
-                ", comeFrom='" + getcomeFrom() + '\'' +
-                ", model='" + getModel() + '\'' +
+                ", power=" + power +
+                ", comeFrom='" + comeFrom + '\'' +
+                ", model='" + model + '\'' +
                 '}';
     }
 }

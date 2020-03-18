@@ -1,8 +1,8 @@
 package Lesson8.DopAbstract;
 
 public abstract class Transport {
-    private int power, maxSpeed, weight; // Лош. силы, км/ч, кг.
-    private String model; // (Ауди,БМВ и т.д.)
+    protected int power, maxSpeed, weight; // Лош. силы, км/ч, кг.
+    protected String model; // (Ауди,БМВ и т.д.)
 
 
     double powerCalc(){
@@ -40,5 +40,15 @@ public abstract class Transport {
 
     public String getModel() {
         return model;
+    }
+
+    @Override
+    public String toString() {
+        return "Transport{" +
+                "power=" + power +
+                ", maxSpeed=" + maxSpeed +
+                ", weight=" + weight +
+                ", model='" + model + '\'' +
+                '}';
     }
 }
