@@ -7,10 +7,18 @@ import java.util.List;
 etc.). Реализовать метод get(int index), который возвращает любой элемент
 массива по индексу.*/
 public class Box<T> {
-    ArrayList<T> arrayList;
+    private ArrayList<T> arrayList;
 
     public Box(){
         arrayList=new ArrayList<>();
+    }
+
+    public void add(T values){
+        arrayList.add(values);
+    }
+
+    public T get(int num){
+        return arrayList.get(num);
     }
 
 }
