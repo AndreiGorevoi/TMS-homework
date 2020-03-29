@@ -17,56 +17,13 @@ public class MyClass {
             if(!hashMap.containsKey(strArray[i])){
                 hashMap.put(strArray[i],value);
             }else {
-                for (Map.Entry<String,Integer> item:hashMap.entrySet()) {
-                    if(item.getKey().equals(strArray[i])){
-                        hashMap.put(strArray[i],item.getValue()+1);
-                    }
-                }
+                Integer old = hashMap.get(strArray[i]);
+                hashMap.put(strArray[i],++old);
             }
         }
         System.out.println(hashMap);
         System.out.println(hashMap.keySet());
         }
-        
-        
-
-      /*  ArrayList <String> arrayList = new ArrayList<>();
-
-        String[] str2= str.split("\\s*(\\s|,|!|-|\\.)\\s*");
-
-        for (String strFor:str2) {
-            arrayList.add((String) strFor);
-        }
-
-        Iterator iterator=arrayList.iterator();
-
-        ArrayList <String> dictionary = new ArrayList<>();
-        ArrayList <Integer> numsOfMeet = new ArrayList<>();
-        while (iterator.hasNext()){
-            int tempNum =0;
-            String temp = (String) iterator.next();
-            for (String strFor:arrayList) {
-                if(strFor.equals(temp)){
-                    tempNum++;
-                }
-
-            }
-            if(dictionary.indexOf(temp)<0){
-                dictionary.add(temp);
-                numsOfMeet.add(tempNum);
-            }
-
-        }
-        iterator = dictionary.iterator();
-        Iterator iterator1 = numsOfMeet.iterator();
-
-        while (iterator.hasNext()){
-            System.out.println(iterator.next() + " " + iterator1.next());
-        }*/
-
-
-
-
 
     }
 
