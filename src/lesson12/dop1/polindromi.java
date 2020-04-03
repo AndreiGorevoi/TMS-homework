@@ -23,11 +23,9 @@ public class polindromi {
         }
 
         for (String a:arrayList) {
-            String reverse = "";
-            for (int i = a.length()-1; i>-1 ; i--) {
-                reverse+=a.charAt(i);
-            }
-            if(a.equals(reverse)){
+            StringBuffer reverse = new StringBuffer(a);
+            reverse.reverse();
+            if(a.equalsIgnoreCase(String.valueOf(reverse))){
                 reversedArrayList.add(a);
             }
         }
