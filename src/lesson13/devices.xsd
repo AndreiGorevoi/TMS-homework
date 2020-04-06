@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="devices">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="device" maxOccurs="unbounded" minOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="name">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:maxLength value="20"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="origin">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:maxLength value="10"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="price">
+                            <xs:complexType>
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:integer">
+                                        <xs:attribute name="currency" type="xs:string" use="required"/>
+                                    </xs:extension>
+                                </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="type">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="perefir" type="xs:string"/>
+                                    <xs:element name="consumption" type="xs:integer"/>
+                                    <xs:element name="culler" type="xs:string"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="complect">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="keybord" type="forComplect"/>
+                                    <xs:element name="mouse" type="forComplect"/>
+                                    <xs:element name="volume" type="forComplect"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="port">
+                            <xs:complexType>
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                        <xs:attribute name="multiportable" default="yes"/>
+                                    </xs:extension>
+                                </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="id" use="required">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:integer">
+                                <xs:totalDigits value="8"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+
+
+<xs:simpleType name="Critical">
+    <xs:restriction base="xs:string">
+        <xs:maxLength value="3"/>
+    </xs:restriction>
+</xs:simpleType>
+
+    <xs:complexType name="forComplect">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="critical" type="Critical"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+ </xs:schema>

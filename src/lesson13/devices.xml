@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices>
+    <device id="1">
+        <name>Xiaomi PC</name>
+        <origin>China</origin>
+        <price currency="EUR">1500</price>
+        <type>
+            <perefir>Yes</perefir>
+            <consumption>2500</consumption>
+            <culler>Yes</culler>
+        </type>
+        <complect>
+            <keybord critical="yes">Sven 3500v.7</keybord>
+            <mouse critical="no">Steel Series sensei</mouse>
+            <volume critical="no">Horizont</volume>
+        </complect>
+        <port multiportable="yes">USB,LPT</port>
+    </device>
+
+    <device id="2">
+        <name>Acer aspire v3-571g</name>
+        <origin>Taiwan</origin>
+        <price currency="USD">500</price>
+        <type>
+            <perefir>Yes</perefir>
+            <consumption>3500</consumption>
+            <culler>Yes</culler>
+        </type>
+        <complect>
+            <keybord critical="yes">parent's</keybord>
+            <mouse critical="no">touchpad</mouse>
+            <volume critical="no">JBC</volume>
+        </complect>
+        <port multiportable="no">USB</port>
+    </device>
+
+</devices>
