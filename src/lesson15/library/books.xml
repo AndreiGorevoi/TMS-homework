@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book id="1">
+        <name>Quo Vadis</name>
+        <author>H.Sinchevich</author>
+        <genre>Roman</genre>
+        <dateOfPublish>1951</dateOfPublish>
+        <typeOfCover>Hard</typeOfCover>
+        <permission>anywhere</permission>
+    </book>
+    <book id="2">
+        <name>The Brothers Karamazov</name>
+        <author>F.Dostoevsi</author>
+        <genre>Roman</genre>
+        <dateOfPublish>1880</dateOfPublish>
+        <typeOfCover>Hard</typeOfCover>
+        <permission>anywhere</permission>
+    </book>
+    <book id="3">
+        <name>Son of God</name>
+        <author>A.Men'</author>
+        <genre>Roman</genre>
+        <dateOfPublish>2012</dateOfPublish>
+        <typeOfCover>Hard</typeOfCover>
+        <permission>anywhere</permission>
+    </book>
+    <book id="4">
+        <name>Meet without border</name>
+        <author>M.Mironova</author>
+        <genre>Free genre</genre>
+        <dateOfPublish>2015</dateOfPublish>
+        <typeOfCover>Hard</typeOfCover>
+        <permission>anywhere</permission>
+    </book>
+    <book id="5">
+        <name>History of art</name>
+        <author>A.Aksenova</author>
+        <genre>History</genre>
+        <dateOfPublish>2020</dateOfPublish>
+        <typeOfCover>Hard</typeOfCover>
+        <permission>Only library</permission>
+    </book>
+
+</books>
